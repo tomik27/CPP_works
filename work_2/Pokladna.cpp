@@ -17,7 +17,7 @@ Pokladna::~Pokladna()
 Uctenka& Pokladna::vystavUctenku(double castka, double dph) {
 	//return *uctenka;
 	//Uctenka* uctenka = new Uctenka(castka, dph);
-	if (pocetVydanychUctenek == POCET)
+	if (pocetVydanychUctenek == 10)
 		throw overflow_error("Cash register is full");
 
 	int noveId = citacId;
