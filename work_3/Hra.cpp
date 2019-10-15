@@ -21,7 +21,7 @@ int* Hra::najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double
 	{
 		if (StatickyObjekt* v = dynamic_cast<StatickyObjekt*>(objekty[i])) {
 			if ((objekty[i]->getX() > xmin&& objekty[i]->getX() < xmax) && (objekty[i]->getY() > ymin&& objekty[i]->getY() < ymax)) {
-				poleId[pocetNalezenych] = i;
+				poleId[pocetNalezenych] = v->getId();
 				pocetNalezenych++;
 			}
 		}
@@ -33,7 +33,7 @@ int* Hra::najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double
 	}
 	delete[] poleId;
 
-	return poleId;
+	return result;
 }
 
 PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double r)

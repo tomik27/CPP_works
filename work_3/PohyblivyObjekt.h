@@ -9,6 +9,6 @@ public:
 
 	double getuhelNatoceni();
 	void setuhelNatoceni(double uhel);
-
+	PohyblivyObjekt(int id, double x, double y, double uhel);
 };
 #endif // DEBUG
