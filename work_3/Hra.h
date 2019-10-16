@@ -10,14 +10,14 @@ public:
 	Hra();
 	void vlozObjekt(Objekt* o);
 	//Vloží objekt do pole.
-	int* najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double ymax);
+	int* najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double ymax)const;
 	//Vrátí pole id všech statických objektù v zadaných souøadnicích.
 	PohyblivyObjekt** najdiPohybliveObjektyVOblasti(double x, double y,
-		double r);
+		double r)const;
 	//Vrátí pole ukazelù na pohyblivé objekty v kruhové oblasti(S = [x, y],
 		//radius = r).
 	PohyblivyObjekt** najdiPohybliveObjektyVOblasti(double x, double y,
-		double r, double umin, double umax);
+		double r, double umin, double umax)const;
 	//	Viz pøedchozí, navíc kontrola úhlu natoèení.
 
 };

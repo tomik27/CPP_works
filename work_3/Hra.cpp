@@ -1,7 +1,7 @@
 #include "Hra.h"
 
 int pocetObjektu = 0;
-int velikostPole=10;
+int velikostPole = 10;
 Hra::Hra()
 {
 	objekty = new Objekt * [velikostPole];
@@ -24,7 +24,7 @@ void Hra::vlozObjekt(Objekt* o)
 	pocetObjektu++;
 }
 
-int* Hra::najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double ymax)
+int* Hra::najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double ymax)const
 {
 	int pocetNalezenych = 0;
 	int* poleId = new int[pocetObjektu];
@@ -48,7 +48,7 @@ int* Hra::najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double
 	return result;
 }
 
-PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double r)
+PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double r)const
 {
 
 	int index = 0;
@@ -59,14 +59,14 @@ PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double 
 			// old was safely casted to NewType
 			if (((objekty[i]->getX() < (x + r)) && (objekty[i]->getY() < (y + r)))) {
 				polePO[index] = v;
-				index++;
+				++index;
 			}
 		}
 	}
 	return polePO;
 }
 
-PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double r, double umin, double umax)
+PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double r, double umin, double umax)const
 {
 
 	int index = 0;
@@ -75,7 +75,7 @@ PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double 
 	{
 		if (PohyblivyObjekt* v = dynamic_cast<PohyblivyObjekt*>(objekty[i])) {
 			// old was safely casted to NewType
-			if (((objekty[i]->getX() < (x + r)) && (objekty[i]->getY() < (y + r))) && (umin<= v->getuhelNatoceni() && umax>v->getuhelNatoceni())) {
+			if (((objekty[i]->getX() < (x + r)) && (objekty[i]->getY() < (y + r))) && (umin <= v->getuhelNatoceni() && umax > v->getuhelNatoceni())) {
 				polePO[index] = v;
 				index++;
 			}
