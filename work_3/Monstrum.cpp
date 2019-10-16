@@ -1,6 +1,12 @@
 #include "Monstrum.h"
 
-int Monstrum::getHp()
+Monstrum::Monstrum(int id):PohyblivyObjekt(id)
+{
+	this->hp = 0;
+	this->maxhp = 0;
+}
+
+int Monstrum::getHp()const
 {
 	return this->hp;
 }
@@ -10,7 +16,7 @@ void Monstrum::setHp(int hp)
 	this->hp = hp;
 }
 
-int Monstrum::getMaxHp()
+int Monstrum::getMaxHp()const
 {
 	return this->maxhp;
 }

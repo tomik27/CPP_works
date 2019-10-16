@@ -15,8 +15,8 @@ int main() {
 	Objekt* o2 = new StatickyObjekt(TypPrekazky::MalaRostlina, 1);
 	Objekt* o1 = new StatickyObjekt(TypPrekazky::Skala, 2);
 	Objekt* o3 = new StatickyObjekt(TypPrekazky::Skala, 3);
-	Objekt* o4 = new Objekt(1, 0.0, 0.0);
-	Objekt* pohybObjekt = new PohyblivyObjekt(20,2.0, 2.0,1.0);
+	Objekt* o4 = new Objekt(1);
+	Objekt* pohybObjekt = new PohyblivyObjekt(20);
 
 
 	hra->vlozObjekt(o3);

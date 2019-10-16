@@ -1,13 +1,25 @@
 #include "Hra.h"
 
 int pocetObjektu = 0;
+int velikostPole=10;
 Hra::Hra()
 {
-	objekty = new Objekt * [20];
+	objekty = new Objekt * [velikostPole];
 }
 
 void Hra::vlozObjekt(Objekt* o)
 {
+	if (pocetObjektu == velikostPole) {
+		velikostPole += 10;
+		Objekt** np = new Objekt * [velikostPole];
+
+		for (size_t i = 0; i < velikostPole; i++)
+		{
+			np[i] = objekty[i];
+		}
+		delete[] objekty;
+		objekty = np;
+	}
 	objekty[pocetObjektu] = o;
 	pocetObjektu++;
 }
@@ -63,7 +75,7 @@ PohyblivyObjekt** Hra::najdiPohybliveObjektyVOblasti(double x, double y, double 
 	{
 		if (PohyblivyObjekt* v = dynamic_cast<PohyblivyObjekt*>(objekty[i])) {
 			// old was safely casted to NewType
-			if (((objekty[i]->getX() < (x + r)) && (objekty[i]->getY() < (y + r))) && (umin< objekty[i]->getY() && umax>objekty[i]->getX())) {
+			if (((objekty[i]->getX() < (x + r)) && (objekty[i]->getY() < (y + r))) && (umin<= v->getuhelNatoceni() && umax>v->getuhelNatoceni())) {
 				polePO[index] = v;
 				index++;
 			}

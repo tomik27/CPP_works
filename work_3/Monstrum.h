@@ -6,9 +6,10 @@ private:
 	int hp;
 	int maxhp;
 public:
-	int getHp();
+	Monstrum(int id);
+	int getHp()const;
 	void setHp(int hp);
-	int getMaxHp();
+	int getMaxHp()const;
 	void setMaxHp(int maxHp);
 };
 #endif // DEBUG

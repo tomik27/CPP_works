@@ -7,8 +7,8 @@ private:
 	double uhelNatoceni;
 public:
 
-	double getuhelNatoceni();
+	double getuhelNatoceni()const;
 	void setuhelNatoceni(double uhel);
-	PohyblivyObjekt(int id, double x, double y, double uhel);
+	PohyblivyObjekt(int id);
 };
 #endif // DEBUG

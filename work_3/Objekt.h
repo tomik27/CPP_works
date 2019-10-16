@@ -11,15 +11,15 @@ private:
 	double y;
 
 public:
-	Objekt(int id, double x, double y);
+	Objekt(int id);
 	virtual ~Objekt();
 	void setX(double x);
-	double getX();
+	double getX()const;
 
 	void setY(double y);
-	double getY();
+	double getY()const;
 
-	double getId();
+	double getId()const;
 
 };
 #endif // DEBUG

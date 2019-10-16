@@ -1,6 +1,6 @@
 #include "StatickyObjekt.h"
 
-StatickyObjekt::StatickyObjekt(TypPrekazky typ, int id) :Objekt(id, 0.0, 0.0) {
+StatickyObjekt::StatickyObjekt(TypPrekazky typ, int id) :Objekt(id) {
 	this->typPrekazky = typ;
 }
 
