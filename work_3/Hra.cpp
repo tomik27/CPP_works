@@ -1,10 +1,22 @@
 #include "Hra.h"
-
+#include <iostream>
 int pocetObjektu = 0;
 int velikostPole = 10;
 Hra::Hra()
 {
+	
 	objekty = new Objekt * [velikostPole];
+}
+
+Hra::~Hra()
+{
+	for (size_t i = 0; i < velikostPole; i++)
+	{
+		delete	objekty[i];
+	}
+	delete[] objekty;
+	std::cout << "Pamet" << (_CrtDumpMemoryLeaks() ? "Ano" : "NE") << std:: endl;
+	system("pause");
 }
 
 void Hra::vlozObjekt(Objekt* o)

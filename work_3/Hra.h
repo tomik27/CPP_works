@@ -8,6 +8,7 @@ private:
 	Objekt** objekty;
 public:
 	Hra();
+	~Hra();
 	void vlozObjekt(Objekt* o);
 	//Vloží objekt do pole.
 	int* najdiIdStatickychObjektu(double xmin, double xmax, double ymin, double ymax)const;
