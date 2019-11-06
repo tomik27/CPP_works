@@ -23,7 +23,6 @@ int Cas::compareTo(IComparable* obj) const
 	else if (this->minuty < cas->minuty) {
 		return -1;
 	}
-
 	if (this->sekundy > cas->sekundy) {
 		return 1;
 	}else if(this->sekundy<cas->sekundy){

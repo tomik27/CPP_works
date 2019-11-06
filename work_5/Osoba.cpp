@@ -1,11 +1,9 @@
 #include "Osoba.h"
 using namespace Entity;
-
-
-
 Entity::Osoba::~Osoba()
 {
 }
+
 
 Entity::Osoba::Osoba()
 {
@@ -22,6 +20,7 @@ std::string Entity::Osoba::getJmeno() const
 {
 	return this->jmeno;
 }
+
 
 std::string Entity::Osoba::getTelefon() const
 {
