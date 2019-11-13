@@ -8,12 +8,12 @@
 
 struct Osoba {
 private:
-	std::string _jmeno;
-	std::string _prijmeni;
-	Adresa _trvaleBydliste;
-	Datum _datumNarozeni;
+	std::string jmeno;
+	std::string prijmeni;
+	Adresa trvaleBydliste;
+	Datum datumNarozeni;
 public:
-	Osoba(std::string _jmeno, std::string _prijmeni, Adresa _trvaleBydliste, Datum _datumNarozeni);
+	Osoba(std::string jmeno, std::string prijmeni, Adresa trvaleBydliste, Datum datumNarozeni);
 	Osoba();
 	~Osoba();
 
@@ -24,8 +24,8 @@ public:
 
 	void setJmeno(std::string jmeno);
 	void setPrijmeni(std::string prijmeni);
-	void setTrvaleBydliste(Adresa _trvaleBydliste);
-	void setDatumNarozeni(Datum _datumNarozeni);
+	void setTrvaleBydliste(Adresa trvaleBydliste);
+	void setDatumNarozeni(Datum datumNarozeni);
 	//friend std::ostream& operator<<(std::ostream& os, const Osoba& osoba);
 	//friend std::istream& operator>>(std::istream& is,  Osoba& osoba);
 };

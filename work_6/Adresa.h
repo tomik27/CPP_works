@@ -4,12 +4,12 @@
 #include <iostream>
 struct Adresa {
 private:
-	std::string _ulice;
-	std::string _mesto;
-	std::string _psc;
+	std::string ulice;
+	std::string mesto;
+	std::string psc;
 public:
 	Adresa();
-	Adresa(std::string _ulice, std::string _mesto, std::string _psc);
+	Adresa(std::string ulice, std::string mesto, std::string psc);
 	void setUlice(std::string ulice);
 	void setMesto(std::string mesto);
 	void setPSC(std::string psc);

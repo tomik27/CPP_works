@@ -6,39 +6,39 @@ Datum::Datum()
 
 Datum::Datum(int den, int mesic, int rok)
 {
-	this->_den = den;
-	this->_mesic = mesic;
-	this->_rok = rok;
+	this->den = den;
+	this->mesic = mesic;
+	this->rok = rok;
 }
 
 void Datum::setDen(int den)
 {
-	this->_den = den;
+	this->den = den;
 }
 
 void Datum::setMesic(int mesic)
 {
-	this->_mesic = mesic;
+	this->mesic = mesic;
 }
 
 void Datum::setRok(int rok)
 {
-	this->_rok = rok;
+	this->rok = rok;
 }
 
 int Datum::getDen() const
 {
-	return this->_den;
+	return den;
 }
 
 int Datum::getMesic() const
 {
-	return this->_mesic;
+	return mesic;
 }
 
 int Datum::getRok() const
 {
-	return this->_rok;
+	return rok;
 }
 
  std::ostream& operator<<(std::ostream& os, const Datum& adr) {

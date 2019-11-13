@@ -1,10 +1,10 @@
 #include "Osoba.h"
 
 Osoba::Osoba(std::string _jmeno, std::string _prijmeni, Adresa _trvaleBydliste, Datum _datumNarozeni) {
-	this->_datumNarozeni = _datumNarozeni;
-	this->_trvaleBydliste = _trvaleBydliste;
-	this->_jmeno = _jmeno;
-	this->_prijmeni = _prijmeni;
+	this->datumNarozeni = _datumNarozeni;
+	this->trvaleBydliste = _trvaleBydliste;
+	this->jmeno = _jmeno;
+	this->prijmeni = _prijmeni;
 }
 Osoba::Osoba() {
 
@@ -14,29 +14,29 @@ Osoba::~Osoba() {
 }
 
 std::string Osoba::getJmeno()const {
-	return this->_jmeno;
+	return jmeno;
 }
 std::string Osoba::getPrijmeni()const {
-	return this->_prijmeni;
+	return  prijmeni;
 }
 Adresa Osoba::getTrvaleBydliste()const {
-	return this->_trvaleBydliste;
+	return  trvaleBydliste;
 }
 Datum Osoba::getDatumNarozeni()const {
-	return this->_datumNarozeni;
+	return  datumNarozeni;
 }
 
 void Osoba::setJmeno(std::string jmeno) {
-	this->_jmeno = jmeno;
+	this->jmeno = jmeno;
 }
 void Osoba::setPrijmeni(std::string prijmeni) {
-	this->_prijmeni = prijmeni;
+	this->prijmeni = prijmeni;
 }
 void Osoba::setTrvaleBydliste(Adresa _trvaleBydliste) {
-	this->_trvaleBydliste = _trvaleBydliste;
+	this->trvaleBydliste = _trvaleBydliste;
 }
 void Osoba::setDatumNarozeni(Datum _datumNarozeni) {
-	this->_datumNarozeni = _datumNarozeni;
+	this->datumNarozeni = _datumNarozeni;
 }
 //std::ostream& operator<<(std::ostream& os, const Osoba& osoba)
 //{

@@ -3,9 +3,9 @@
 #include <iostream>
 struct Datum {
 private:
-	int _den;
-	int _mesic;
-	int _rok;
+	int den;
+	int mesic;
+	int rok;
 public:
 	Datum();
 	Datum(int den,int mesic,int rok);
