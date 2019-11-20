@@ -196,10 +196,10 @@ Matrix<T> Matrix<T>::Soucet(T skalar) const
 	{
 		for (size_t j = 0; j < this->column; j++)
 		{
-			newMatrix[i][j] =this->MatrixValues[i][j] * skalar;
+			newMatrix[i][j] =this->MatrixValues[i][j] + skalar;
 		}
 	}
-	return this;
+	return newMatrix;
 }
 
 
