@@ -2,9 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Uctenka::Uctenka() {
 
-}
 Uctenka::Uctenka(double castka, double dph) {
 	Uctenka::cisloUctenky;
 	this->castka = castka;
