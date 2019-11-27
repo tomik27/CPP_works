@@ -85,9 +85,11 @@ int main() {
 	pole[0] = osoba1;
 	pole[1] = osoba2;
 	pole[2] = osoba3;
-	//uloz(pole,3, "pokus.txt");
+	osoba1.UlozTest();
+	uloz(pole,3, "pokus.txt");
 	//Osoba* pole1 = nacti(3);
 	ulozBn(pole, 3);
 	Osoba* pole1=nactiBn(3);
+
 	return 0;
 }

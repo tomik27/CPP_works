@@ -21,7 +21,7 @@ public:
 	std::string getPrijmeni()const;
 	Adresa getTrvaleBydliste()const;
 	Datum getDatumNarozeni()const;
-
+	void UlozTest();
 	void setJmeno(std::string jmeno);
 	void setPrijmeni(std::string prijmeni);
 	void setTrvaleBydliste(Adresa trvaleBydliste);

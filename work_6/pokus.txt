@@ -1,9 +1,0 @@
-Tomas Nikdo
-Mesto psc ulice
-1 1 1
-Ondra Nikdo
-Mesto psc ulice
-1 1 1
-Pa5ey Nikdo
-Mesto psc ulice
-1 1 1

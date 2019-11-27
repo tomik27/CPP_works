@@ -1,5 +1,6 @@
 #include "Osoba.h"
-
+#include <fstream>
+#include<iostream>
 Osoba::Osoba(std::string _jmeno, std::string _prijmeni, Adresa _trvaleBydliste, Datum _datumNarozeni) {
 	this->datumNarozeni = _datumNarozeni;
 	this->trvaleBydliste = _trvaleBydliste;
@@ -24,6 +25,14 @@ Adresa Osoba::getTrvaleBydliste()const {
 }
 Datum Osoba::getDatumNarozeni()const {
 	return  datumNarozeni;
+}
+
+void Osoba::UlozTest()
+{
+	std::ofstream out{};
+	out.open("pokus.txt");
+	out << this;
+	out.close();
 }
 
 void Osoba::setJmeno(std::string jmeno) {
