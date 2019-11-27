@@ -50,7 +50,15 @@ void Potrubi::vlozPrvek(int x, int y, APotrubniPrvek* prvek)
 
 Potrubi::~Potrubi()
 {
-
+	for (size_t i = 0; i < pocetRadku; i++)
+	{
+		for (size_t j = 0; j < pocetSloupcu; j++)
+		{
+			delete[] prvky[i][j];
+		}
+		delete[] prvky[i];
+	}
+	delete[] prvky;
 }
 
 
